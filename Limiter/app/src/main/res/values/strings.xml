@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Limiter</string>
+    <string name="user">user</string>
+    <string name="admin">admin</string>
+</resources>
