@@ -55,7 +55,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/loginBtn"
-        android:onClick="openSignInPage"
+        android:onClick="startSignUpActivity"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
