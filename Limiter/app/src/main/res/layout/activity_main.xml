@@ -14,8 +14,8 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="10dp"
-        android:src="@drawable/parking_car"
-        />
+        android:src="@drawable/parking_car" />
+
     <TextView
         android:id="@+id/limiter"
         android:layout_width="wrap_content"
@@ -25,9 +25,7 @@
         app:layout_constraintRight_toRightOf="parent"
         android:text="@string/app_name"
         android:textSize="58.64sp"
-        android:layout_marginTop="50dp"
-
-        />
+        android:layout_marginTop="50dp" />
 
     <Button
         android:id="@+id/userBtn"
@@ -38,10 +36,8 @@
         app:layout_constraintTop_toBottomOf="@id/limiter"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-
         android:layout_marginTop="100dp"
-        android:onClick="openLoginPage"
-        />
+        android:onClick="startLoginActivity" />
 
     <Button
         android:id="@+id/adminBtn"
@@ -53,8 +49,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="50dp"
-        android:onClick="openLoginPage"
-        />
+        android:onClick="startLoginActivity" />
 
 
 

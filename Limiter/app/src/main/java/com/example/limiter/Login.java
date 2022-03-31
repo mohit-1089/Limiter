@@ -5,6 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
+
+import java.sql.Connection;
+import java.sql.SQLException;
 
 public class Login extends AppCompatActivity {
 
@@ -14,9 +18,14 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
 
-    public void openSignInPage(View view) {
+    public void startSignUpActivity(View view) throws SQLException {
+
 
         Intent intent=new Intent(this, SignUp.class);
         startActivity(intent);
+
+
+
+
     }
 }
