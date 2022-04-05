@@ -8,6 +8,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
+
 public class SignUp extends AppCompatActivity {
     Button signUp;
     EditText fname,lname,eml,mNo,pswd,cpswd;
@@ -25,11 +30,11 @@ public class SignUp extends AppCompatActivity {
 
         signUp=(Button) findViewById(R.id.signUpBtn);
         fname=(EditText) findViewById(R.id.firstName);
-        lname=findViewById(R.id.lastName);
-        eml=findViewById(R.id.email);
-        pswd=findViewById(R.id.password);
-        mNo=findViewById(R.id.mobileNo);
-        cpswd=findViewById(R.id.conf_password);
+        lname=(EditText) findViewById(R.id.lastName);
+        eml= (EditText) findViewById(R.id.email);
+        pswd= (EditText) findViewById(R.id.password);
+        mNo= (EditText) findViewById(R.id.mobileNo);
+        cpswd= (EditText) findViewById(R.id.conf_password);
 
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,35 +73,27 @@ public class SignUp extends AppCompatActivity {
                 {
                     Toast.makeText(getApplicationContext(),"Password is Weak",Toast.LENGTH_SHORT).show();
                 }
+                else{
+                    try {
+                        User u= new User(-1,first_name,last_name,email,mobileNo,password);
+                        int res =DBServices.addUser(u);
+                        if(res>0)
+                        {
+                            Toast.makeText(getApplicationContext(),"Registration Successful",Toast.LENGTH_SHORT).show();
 
-//                else
-//                {
-//                  int emailExits=DBServices.countEmail(email);
-//                  String toastMassage;
-//                  if(emailExits==0)
-//                  {
-//                      currentUser=new User(first_name,last_name,email,mobileNo,password);
-//                      if(DBServices.addUser(currentUser)!=0)
-//                          toastMassage="Registration Successful !";
-//                      else
-//                          toastMassage="Connection Error....!";
-//                  }
-//                  else if(emailExits>0)
-//                  {
-//                      toastMassage="Email is already Registered !";
-//                  }
-//                  else
-//                  {
-//                      toastMassage="Connection Eorror....!";
-//                  }
-//
-//                  Toast.makeText(getApplicationContext(),toastMassage,Toast.LENGTH_SHORT).show();
-//
-//                }
-//
-//
-           }
-       });
+                        }
+
+                    }
+                    catch(Exception e)
+                    {
+                        Toast.makeText(getApplicationContext(),"Registration Unsuccessful",Toast.LENGTH_SHORT).show();
+                        e.printStackTrace();
+                    }
+                }
+
+
+            }
+        });
 
 
 
