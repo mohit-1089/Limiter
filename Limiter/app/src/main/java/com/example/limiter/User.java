@@ -11,7 +11,7 @@ public class User {
 
     public User()
     {
-        uid=-1;
+        uid =-1;
         first_name="";
         last_name="";
         email="";
@@ -20,9 +20,9 @@ public class User {
 
     }
 
-    public User(String first_name,String last_name,String email,String mobileNo,String password)
+    public User( int uid,String first_name, String last_name, String email, String mobileNo, String password)
     {
-        uid=-1;
+        this.uid = uid;
         this.first_name=first_name;
         this.last_name=last_name;
         this.email=email;
