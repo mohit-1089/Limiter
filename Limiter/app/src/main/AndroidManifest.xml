@@ -12,6 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Limiter">
         <activity
+            android:name=".sidebar"
+            android:exported="false"
+            android:label="@string/title_activity_sidebar"
+            android:theme="@style/Theme.Limiter.NoActionBar" />
+        <activity
             android:name=".Otp"
             android:exported="false" />
         <activity
