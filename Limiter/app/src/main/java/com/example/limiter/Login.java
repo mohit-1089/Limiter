@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.limiter.ui.home.HomeFragment;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -54,6 +56,9 @@ public class Login extends AppCompatActivity {
                             if (password.equals(dbpass)) {
                                 String display = "Welcome "+first_name+" "+last_name;
                                 Toast.makeText(getApplicationContext(), display, Toast.LENGTH_SHORT).show();
+                                Intent intent=new Intent(getApplicationContext(), sidebar.class);
+                                startActivity(intent);
+
                             }
                             else
                             {
@@ -80,10 +85,12 @@ public class Login extends AppCompatActivity {
 
         Intent intent=new Intent(this, SignUp.class);
         startActivity(intent);
+    }
+    public void startOtpActivity(View view) {
 
 
-
-
+        Intent intent=new Intent(this, Otp.class);
+        startActivity(intent);
     }
 
 }

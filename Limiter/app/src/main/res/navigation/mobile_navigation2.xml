@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation2"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_faq"
+        android:name="com.example.limiter.ui.faq.FaqFragment"
+        android:label="@string/menu_faq"
+        tools:layout="@layout/fragment_faq" />
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.limiter.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_parking"
+        android:name="com.example.limiter.ui.parking.ParkingFragment"
+        android:label="@string/menu_parking"
+        tools:layout="@layout/fragment_parking" />
+
+    <fragment
+        android:id="@+id/nav_register"
+        android:name="com.example.limiter.ui.register.RegisterFragment"
+        android:label="@string/menu_register"
+        tools:layout="@layout/fragment_register" />
+</navigation>
