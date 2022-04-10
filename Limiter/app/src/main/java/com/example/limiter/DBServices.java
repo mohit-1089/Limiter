@@ -19,7 +19,7 @@ public class DBServices {
     {
         Connection con=null;
         String url = "jdbc:mysql://limiter-server.mysql.database.azure.com:3306/";
-        String database = "tmp";
+        String database = "Limiter";
         String user = "Master@limiter-server";
         String password = "Monkey@123";
         String driver = "com.mysql.jdbc.Driver";
@@ -27,7 +27,7 @@ public class DBServices {
             StrictMode.ThreadPolicy thr = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(thr);
             Class.forName(driver).getDeclaredConstructor().newInstance();
-            con=DriverManager.getConnection(url,user,password);
+            con=DriverManager.getConnection(url+database,user,password);
         }
         catch(Exception e)
         {
@@ -46,23 +46,26 @@ public class DBServices {
         }
     }
 
-    public static int countEmail(String email)
+    public static boolean checkEmail(String email)
     {
-        int rowCount=0;
+        boolean isPresent=true;
+        String query="select email from Limiter.User where email='"+email+"'" ;
+
+
         try {
+            Connection conn = DBServices.openDB();
+            Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+            ResultSet rs = stmt.executeQuery(query);
 
-            Connection conn= DBServices.openDB();
-            PreparedStatement stmt=conn.prepareStatement("select count (email) from Person where email='?' ");
-            stmt.setString(1,email);
-
-            ResultSet rs = stmt.executeQuery();
-            rowCount = rs.last() ? rs.getRow() : 0;
-            DBServices.closeDB(conn);
-            return rowCount;
-        } catch (SQLException throwable) {
-            throwable.printStackTrace();
-            return -1;
+            if(!rs.next())
+                isPresent=false;
         }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+
+        }
+        return isPresent;
 
     }
     public static User checkLogin(String email)
@@ -71,7 +74,7 @@ public class DBServices {
         int uid;
         User u=null;
         ResultSet rs;
-        String query="select pid,pass,first_name,last_name,mobile_no from limiter.user" +
+        String query="select uid,pass,first_name,last_name,mobile_no from limiter.user" +
                 " where email='"+email+"' ";
         try {
             Connection conn = DBServices.openDB();
@@ -85,7 +88,7 @@ public class DBServices {
                 first_name = rs.getString("first_name");
                 last_name = rs.getString("last_name");
                 dbPass = rs.getString("pass");
-                uid = rs.getInt("pid");
+                uid = rs.getInt("uid");
                 mobile_no = rs.getString("mobile_no");
                 DBServices.closeDB(conn);
                 u = new User( uid,first_name, last_name, email, mobile_no, dbPass);

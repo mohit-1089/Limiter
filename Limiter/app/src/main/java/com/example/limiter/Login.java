@@ -7,9 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
-
-import com.example.limiter.ui.home.HomeFragment;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -19,78 +19,82 @@ import java.sql.Statement;
 public class Login extends AppCompatActivity {
     Button login;
     EditText eml,pswd;
+    ProgressBar progressBar;
+    TextView tvForgot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        login =(Button) findViewById(R.id.loginBtn);
-        eml= (EditText) findViewById(R.id.email);
-        pswd= (EditText) findViewById(R.id.password);
+        login =  findViewById(R.id.loginBtn);
+        eml = findViewById(R.id.email);
+        pswd =  findViewById(R.id.password);
+        progressBar=findViewById(R.id.pbLogin);
+        progressBar.setVisibility(View.GONE);
+        tvForgot=findViewById(R.id.tvForgotPassword);
+
+
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                try {
-                    String email, password;
-                    email = eml.getText().toString().trim();
-                    password = pswd.getText().toString();
-                    String query="select pass,first_name,last_name from limiter.user" +
-                            " where email='"+email+"' ";
-                    Connection conn = DBServices.openDB();
-                    ResultSet rs;
-                    Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
-                    rs=stmt.executeQuery(query);
-                    if(!rs.next())
+
+                String email=eml.getText().toString().trim();
+                String password=pswd.getText().toString();
+
+                User u=DBServices.checkLogin(email);
+
+                if(u==null)
+                    Toast.makeText(getApplicationContext(),"Email doesn't exists",Toast.LENGTH_SHORT).show();
+                else
+                {
+                    if(u.password.equals(password))
                     {
-                        Toast.makeText(getApplicationContext(),"Invalid email",Toast.LENGTH_SHORT).show();
+                        SharedData.globalUser=u;
+                        Toast.makeText(getApplicationContext(),"Welcome "+u.first_name,Toast.LENGTH_SHORT).show();
+                        Intent intent=new Intent(getApplicationContext(),sidebar.class);
+                        startActivity(intent);
                     }
                     else
                     {
-                        try {
-                            String dbpass, first_name, last_name;
-                            first_name = rs.getString("first_name");
-                            last_name = rs.getString("last_name");
-                            dbpass = rs.getString("pass");
-                            if (password.equals(dbpass)) {
-                                String display = "Welcome "+first_name+" "+last_name;
-                                Toast.makeText(getApplicationContext(), display, Toast.LENGTH_SHORT).show();
-                                Intent intent=new Intent(getApplicationContext(), sidebar.class);
-                                startActivity(intent);
-
-                            }
-                            else
-                            {
-                                Toast.makeText(getApplicationContext(), "Wrong Password", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                        catch(Exception e)
-                        {
-                            e.printStackTrace();
-                        }
-
+                        Toast.makeText(getApplicationContext(),"Wrong Password",Toast.LENGTH_SHORT).show();
                     }
+                }
 
-                } catch (Exception e) {
-                    e.printStackTrace();
+            }
+        });
+
+        tvForgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String email=eml.getText().toString().trim();
+                String password=pswd.getText().toString();
+
+                if(email.length()==0)
+                    Toast.makeText(getApplicationContext(),"Email required",Toast.LENGTH_SHORT).show();
+
+                else if(DBServices.checkEmail(email))
+                {
+                    SharedData.globalUser.email=email;
+                    Intent intent =new Intent(getApplicationContext(),Otp.class);
+                    startActivity(intent);
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"Email doesn't exist",Toast.LENGTH_SHORT).show();
                 }
             }
-
         });
     }
-
     public void startSignUpActivity(View view) throws SQLException {
 
 
         Intent intent=new Intent(this, SignUp.class);
         startActivity(intent);
-    }
-    public void startOtpActivity(View view) {
 
 
-        Intent intent=new Intent(this, Otp.class);
-        startActivity(intent);
     }
 
 }
