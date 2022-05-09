@@ -30,14 +30,26 @@
         <entry key="..\:/Android_Studio_Projects/Limiter/Limiter/Limiter/app/src/main/res/menu/sidebar.xml" value="0.1796875" />
         <entry key="..\:/Android_Studio_Projects/Limiter/Limiter/Limiter/app/src/main/res/menu/sidebar_admin.xml" value="0.1796875" />
         <entry key="..\:/Sem 4/SE/SE project/Limiter/Limiter/app/src/main/res/layout/activity_change_password.xml" value="0.24010416666666667" />
-        <entry key="..\:/Sem 4/SE/SE project/Limiter/Limiter/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Sem 4/SE/SE project/Limiter/Limiter/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Sem 4/SE/SE project/Limiter/Limiter/app/src/main/res/layout/activity_main.xml" value="0.21203703703703702" />
+        <entry key="..\:/Sem 4/SE/SE project/Limiter/Limiter/app/src/main/res/layout/activity_main2.xml" value="0.25416666666666665" />
         <entry key="..\:/Sem 4/SE/SE project/Limiter/Limiter/app/src/main/res/layout/activity_otp.xml" value="0.2" />
         <entry key="..\:/Sem 4/SE/SE project/Limiter/Limiter/app/src/main/res/layout/activity_sidebar.xml" value="0.21666666666666667" />
         <entry key="..\:/Sem 4/SE/SE project/Limiter/Limiter/app/src/main/res/layout/activity_sign_in.xml" value="0.25416666666666665" />
         <entry key="..\:/Sem 4/SE/SE project/Limiter/Limiter/app/src/main/res/layout/activity_sign_up.xml" value="0.25416666666666665" />
+        <entry key="..\:/Sem 4/SE/SE project/Limiter/Limiter/app/src/main/res/layout/app_bar_sidebar.xml" value="0.25416666666666665" />
         <entry key="..\:/Sem 4/SE/SE project/Limiter/Limiter/app/src/main/res/layout/content_sidebar.xml" value="0.25416666666666665" />
+        <entry key="..\:/Sem 4/SE/SE project/Limiter/Limiter/app/src/main/res/layout/faq_row.xml" value="0.23703703703703705" />
+        <entry key="..\:/Sem 4/SE/SE project/Limiter/Limiter/app/src/main/res/layout/fragment_faq.xml" value="0.25416666666666665" />
         <entry key="..\:/Sem 4/SE/SE project/Limiter/Limiter/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Sem 4/SE/SE project/Limiter/Limiter/app/src/main/res/layout/fragment_parking.xml" value="0.25416666666666665" />
+        <entry key="..\:/Sem 4/SE/SE project/Limiter/Limiter/app/src/main/res/layout/fragment_register.xml" value="0.25416666666666665" />
+        <entry key="..\:/Sem 4/SE/SE project/Limiter/Limiter/app/src/main/res/layout/nav_header_sidebar.xml" value="0.25416666666666665" />
+        <entry key="..\:/Sem 4/SE/SE project/Limiter/Limiter/app/src/main/res/layout/select_and_register.xml" value="0.25416666666666665" />
+        <entry key="..\:/Sem 4/SE/SE project/Limiter/Limiter/app/src/main/res/layout/vehicle_row.xml" value="0.25416666666666665" />
+        <entry key="..\:/Sem 4/SE/SE project/Limiter/Limiter/app/src/main/res/layout/vehicle_type.xml" value="0.25416666666666665" />
+        <entry key="..\:/Sem 4/SE/SE project/Limiter/Limiter/app/src/main/res/menu/activity_main_drawer.xml" value="0.25416666666666665" />
+        <entry key="..\:/Sem 4/SE/SE project/Limiter/Limiter/app/src/main/res/menu/sidebar.xml" value="0.16302083333333334" />
         <entry key="..\:/Users/MOHIT-PC/AndroidStudioProjects/Limiter/app/src/main/res/layout/activity_main.xml" value="0.21944444444444444" />
         <entry key="..\:/Users/jayes/OneDrive/Desktop/yehihailimiter/Limiter/Limiter/app/src/main/res/layout/fragment_parking.xml" value="0.2" />
         <entry key="..\:/Users/jayes/OneDrive/Desktop/yehihailimiter/Limiter/Limiter/app/src/main/res/layout/fragment_register.xml" value="0.1" />

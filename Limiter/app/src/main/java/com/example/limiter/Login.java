@@ -40,6 +40,8 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+
+
                 String email=eml.getText().toString().trim();
                 String password=pswd.getText().toString();
 

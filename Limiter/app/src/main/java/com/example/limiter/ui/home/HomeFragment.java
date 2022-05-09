@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import com.example.limiter.DBServices;
 import com.example.limiter.SharedData;
 import com.example.limiter.Timer;
+import com.example.limiter.Vehicle;
 import com.example.limiter.databinding.FragmentHomeBinding;
 import com.example.limiter.ui.parking.ParkingFragment;
 

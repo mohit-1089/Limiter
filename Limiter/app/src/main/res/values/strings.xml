@@ -15,8 +15,5 @@
     <string name="menu_parking">Display Parking</string>
     <string name="menu_register">Register Vehicle</string>
     <string name="menu_faq">View FAQ</string>
-    <string name="title_activity_sidebar_admin">sidebar_admin</string>
-    <string name="action_settings">Settings</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="vehicle_type">Vehicle Type</string>
 </resources>
