@@ -15,4 +15,5 @@
     <string name="menu_parking">Display Parking</string>
     <string name="menu_register">Register Vehicle</string>
     <string name="menu_faq">View FAQ</string>
+    <string name="vehicle_type">Vehicle Type</string>
 </resources>

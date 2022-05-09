@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.limiter.Vehicle;
 import com.example.limiter.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {

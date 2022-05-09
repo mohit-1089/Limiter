@@ -2,7 +2,7 @@ package com.example.limiter;
 
 public class User {
 
-    int uid;
+    public int uid;
     String first_name;
     String last_name;
     String email;
