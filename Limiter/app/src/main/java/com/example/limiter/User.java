@@ -2,12 +2,12 @@ package com.example.limiter;
 
 public class User {
 
-    int uid;
-    String first_name;
-    String last_name;
-    String email;
-    String mobileNo;
-    String password;
+    public int uid;
+    public String first_name;
+    public String last_name;
+    public String email;
+    public String mobileNo;
+    public String password;
 
     public User()
     {

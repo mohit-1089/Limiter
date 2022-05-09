@@ -14,6 +14,11 @@
         android:theme="@style/Theme.Limiter"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".sidebar_admin"
+            android:exported="false"
+            android:label="@string/title_activity_sidebar_admin"
+            android:theme="@style/Theme.Limiter.NoActionBar" />
+        <activity
             android:name=".ChangePassword"
             android:exported="false" />
 
@@ -34,6 +39,9 @@
             android:exported="false" />
         <activity
             android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".Timer"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
