@@ -2,6 +2,7 @@ package com.example.limiter.adapter;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.limiter.R;
 import com.example.limiter.SharedData;
+import com.example.limiter.Timer;
 import com.example.limiter.Vehicle;
 
 import java.util.ArrayList;
@@ -20,14 +22,15 @@ import java.util.ArrayList;
 public class SelectVehicleRvAdapter extends RecyclerView.Adapter<SelectVehicleRvAdapter.vehicleViewHolder>{
 
     private static ArrayList<Vehicle>v;
-    private Context context;
+    private static Context context;
     private static Dialog dialog;
+    private static int s_id;
 
-
-    public SelectVehicleRvAdapter(ArrayList<Vehicle> v, Context context, Dialog dialog) {
+    public SelectVehicleRvAdapter(ArrayList<Vehicle> v, Context context, Dialog dialog,int s_id) {
         this.v = v;
         this.context = context;
         this.dialog = dialog;
+        this.s_id=s_id;
     }
 
     @NonNull
@@ -79,6 +82,9 @@ public class SelectVehicleRvAdapter extends RecyclerView.Adapter<SelectVehicleRv
         public void onClick(View view) {
             int pos=getAbsoluteAdapterPosition();
             SharedData.currentVehicle=v.get(pos);
+            Intent myIntent = new Intent(context, Timer.class);
+            myIntent.putExtra("id", s_id);
+            context.startActivity(myIntent);
             System.out.println(SharedData.currentVehicle.getModel());
             dialog.cancel();
         }

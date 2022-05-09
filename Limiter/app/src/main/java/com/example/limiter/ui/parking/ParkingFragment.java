@@ -15,7 +15,10 @@ import androidx.fragment.app.Fragment;
 
 import com.example.limiter.DBServices;
 import com.example.limiter.Iot;
+import com.example.limiter.MainActivity;
+import com.example.limiter.SharedData;
 import com.example.limiter.Timer;
+import com.example.limiter.Vehicle;
 import com.example.limiter.databinding.FragmentParkingBinding;
 
 import java.sql.Connection;
@@ -79,151 +82,288 @@ public class ParkingFragment extends Fragment {
         button[1].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                check(1);
+                if(checkUid()) {
+                    check(1);
+                }
+                else{
+                    Toast.makeText(getActivity(),"You have already booked a slot",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         button[2].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                check(2);
+                if(checkUid()) {
+                    check(2);
+                }
+                else{
+                    Toast.makeText(getActivity(),"You have already booked a slot",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         button[3].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                check(3);
+                if(checkUid()) {
+                    check(3);
+                }
+                else{
+                    Toast.makeText(getActivity(),"You have already booked a slot",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         button[4].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                check(4);
+                if(checkUid()) {
+                    check(4);
+                }
+                else{
+                    Toast.makeText(getActivity(),"You have already booked a slot",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         button[5].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                check(5);
+                if(checkUid()) {
+                    check(5);
+                }
+                else{
+                    Toast.makeText(getActivity(),"You have already booked a slot",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         button[6].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                check(6);
+                if(checkUid()) {
+                    check(6);
+                }
+                else{
+                    Toast.makeText(getActivity(),"You have already booked a slot",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         button[7].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                check(7);
+                if(checkUid()) {
+                    check(7);
+                }
+                else{
+                    Toast.makeText(getActivity(),"You have already booked a slot",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         button[8].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                check(8);
+                if(checkUid()) {
+                    check(8);
+                }
+                else{
+                    Toast.makeText(getActivity(),"You have already booked a slot",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         button[9].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                check(9);
+                if(checkUid()) {
+                    check(9);
+                }
+                else{
+                    Toast.makeText(getActivity(),"You have already booked a slot",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         button[10].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                check(10);
+                if(checkUid()) {
+                    check(10);
+                }
+                else{
+                    Toast.makeText(getActivity(),"You have already booked a slot",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         button[11].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                check(11);
+                if(checkUid()) {
+                    check(11);
+                }
+                else{
+                    Toast.makeText(getActivity(),"You have already booked a slot",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         button[12].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                check(12);
+                if(checkUid()) {
+                    check(12);
+                }
+                else{
+                    Toast.makeText(getActivity(),"You have already booked a slot",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         button[13].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                check(13);
+                if(checkUid()) {
+                    check(13);
+                }
+                else{
+                    Toast.makeText(getActivity(),"You have already booked a slot",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         button[14].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                check(14);
+                if(checkUid()) {
+                    check(14);
+                }
+                else{
+                    Toast.makeText(getActivity(),"You have already booked a slot",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         button[15].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                check(15);
+                if(checkUid()) {
+                    check(15);
+                }
+                else{
+                    Toast.makeText(getActivity(),"You have already booked a slot",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         button[16].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                check(16);
+                if(checkUid()) {
+                    check(16);
+                }
+                else{
+                    Toast.makeText(getActivity(),"You have already booked a slot",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         button[17].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                check(17);
+                if(checkUid()) {
+                    check(17);
+                }
+                else{
+                    Toast.makeText(getActivity(),"You have already booked a slot",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         button[18].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                check(18);
+                if(checkUid()) {
+                    check(18);
+                }
+                else{
+                    Toast.makeText(getActivity(),"You have already booked a slot",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         button[19].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                check(19);
+                if(checkUid()) {
+                    check(19);
+                }
+                else{
+                    Toast.makeText(getActivity(),"You have already booked a slot",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         button[20].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                check(20);
+                if(checkUid()) {
+                    check(20);
+                }
+                else{
+                    Toast.makeText(getActivity(),"You have already booked a slot",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         button[21].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                check(21);
+                if(checkUid()) {
+                    check(21);
+                }
+                else{
+                    Toast.makeText(getActivity(),"You have already booked a slot",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         button[22].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                check(22);
+                if(checkUid()) {
+                    check(22);
+                }
+                else{
+                    Toast.makeText(getActivity(),"You have already booked a slot",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         button[23].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                check(23);
+                if(checkUid()) {
+                    check(23);
+                }
+                else{
+                    Toast.makeText(getActivity(),"You have already booked a slot",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         button[24].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                check(24);
+                if(checkUid()) {
+                    check(24);
+                }
+                else{
+                    Toast.makeText(getActivity(),"You have already booked a slot",Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
         //final TextView textView = binding.textGallery;
 
         return root;
+    }
+    public boolean checkUid()
+    {
+        boolean answer=false;
+        try {
+            ResultSet rs;
+            String query = "select v_id,s_id from limiter.transactions where complete = 'false' and uid = "+SharedData.globalUser.uid;
+            Connection conn = DBServices.openDB();
+            Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+            rs = stmt.executeQuery(query);
+            if(!rs.next())
+                answer=true;
+            DBServices.closeDB(conn);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return answer;
     }
     public static void initialiseStart() {
         String query = "select s_id,going_to_be_occupied,occupied,tot_time,start_time from limiter.parking_slot";
@@ -470,9 +610,14 @@ public class ParkingFragment extends Fragment {
                                     DBServices.closeDB(con);
                                     button[id].setBackgroundColor(Color.RED);
                                     button[id].setTextColor(Color.WHITE);
-                                    Intent myIntent = new Intent(getActivity(), Timer.class);
-                                    myIntent.putExtra("id",id);
-                                    startActivity(myIntent);
+
+                                    Vehicle.selectVehicle(getActivity(),id);
+
+//                                    if(SharedData.currentVehicle.vid!=-1) {
+//                                        Intent myIntent = new Intent(getActivity(), Timer.class);
+//                                        myIntent.putExtra("id", id);
+//                                        startActivity(myIntent);
+//                                    }
 
                                 } catch (Exception e) {
                                     e.printStackTrace();
@@ -527,14 +672,15 @@ public class ParkingFragment extends Fragment {
             String display=(Integer)total/3600 + ":"+ (Integer)((total%3600)/60);
 
             tot_Time[id] = display;
-         //TODO:   String insertQuery="insert into limiter.transactions ("+ SharedData.globalUser.uid+","
-          //          +SharedData.globalVehicle.v_id+","+id+",false)";
+            String insertQuery="insert into limiter.transactions values("+ SharedData.globalUser.uid+","
+                   +SharedData.currentVehicle.vid+","+id+",'false')";
+            System.out.println(insertQuery);
             String query = "update limiter.parking_slot set start_time='"+curTime+"',tot_time='" + display + "' where s_id=" + id;
             Connection con = DBServices.openDB();
             Statement st1 = con.createStatement();
             Statement st2=con.createStatement();
             int res1 = st1.executeUpdate(query);
-          //  int res= st2.executeUpdate(insertQuery);
+            int res= st2.executeUpdate(insertQuery);
             DBServices.closeDB(con);
             button[id].setText(display);
             button[id].setTextSize(11);

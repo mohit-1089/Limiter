@@ -18,7 +18,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.limiter.R;
 import com.example.limiter.SharedData;
 import com.example.limiter.Vehicle;
-import com.example.limiter.databinding.FragmentRegisterBinding;
+import com.example.limiter.databinding.*;
 
 public class RegisterFragment extends Fragment {
 

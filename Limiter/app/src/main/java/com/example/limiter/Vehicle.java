@@ -10,14 +10,16 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.limiter.adapter.SelectVehicleRvAdapter;
+import com.example.limiter.ui.*;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
 public class Vehicle {
-    int vid;
+    public int vid;
     int uid;
     String vehicleNo;
     String model;
@@ -93,16 +95,42 @@ public class Vehicle {
 
     }
 
-    public ArrayList<Vehicle> getVehicleOfUser(int uid)
+    public static ArrayList<Vehicle> getVehicleOfUser(int uid)
     {
         ArrayList<Vehicle>allVehicle=new ArrayList<>();
+
+        String query="select v_id,vehicle_no,vehicle_type,model_name from limiter.vehicle" +
+                " where uid="+uid;
+
+        ResultSet rs;
+        try {
+            Connection conn = DBServices.openDB();
+            Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+            rs = stmt.executeQuery(query);
+
+            while(rs.next())
+            {
+                Vehicle tmp_v=new Vehicle(rs.getInt("v_id"),SharedData.globalUser.uid,
+                        rs.getString("vehicle_no"),
+                        rs.getString("model_name"),
+                        rs.getString("vehicle_type"));
+
+                System.out.println(rs.getString("vehicle_no"));
+
+                allVehicle.add(tmp_v);
+            }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
 
 
 
         return allVehicle;
     }
 
-    public static void selectVehicle(Context context)
+    public static void selectVehicle(Context context,int s_id)
     {
        Dialog dialog=new Dialog(context);
 
@@ -115,22 +143,13 @@ public class Vehicle {
        recyclerView.setHasFixedSize(true);
 
 
+        ArrayList<Vehicle>v;
+        v=Vehicle.getVehicleOfUser(SharedData.globalUser.uid);
+
+        System.out.println(v.size());
 
 
-
-
-        ArrayList<Vehicle>v=new ArrayList<>();
-        Vehicle v1=new Vehicle(-1,2,"UP78CV5992","Hero Honda","Bike");
-        Vehicle v2=new Vehicle(-1,2,"HR45CV5992","Tata Safari","Car");
-        Vehicle v3=new Vehicle(-1,2,"DL12MJ5992","Volvo","Bus");
-        v.add(v1);
-        v.add(v2);
-        v.add(v3);
-        v.add(v1);
-        v.add(v2);
-        v.add(v3);
-
-        SelectVehicleRvAdapter selectVehicleRvAdapter=new SelectVehicleRvAdapter(v, dialog.getContext(),dialog);
+        SelectVehicleRvAdapter selectVehicleRvAdapter=new SelectVehicleRvAdapter(v, dialog.getContext(),dialog,s_id);
         recyclerView.setAdapter(selectVehicleRvAdapter);
 
         Button btnRegisVehicle=dialog.findViewById(R.id.btnRegisVehicle);
@@ -138,8 +157,21 @@ public class Vehicle {
             @Override
             public void onClick(View view) {
 
+                try {
+
+                    String upQuery1 = "update limiter.parking_slot set occupied = 'false' where s_id=" + s_id;
+                    Connection con = DBServices.openDB();
+                    Statement st1 = con.createStatement();
+                    int res1 = st1.executeUpdate(upQuery1);
+                    DBServices.closeDB(con);
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 Intent intent=new Intent(context, VehicleRegisActivity.class);
                 context.startActivity(intent);
+
+
 
             }
         });

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".adminFunction.SetMaxTime">
+
+    <EditText
+        android:id="@+id/etVehicleType"
+        android:layout_width="302dp"
+        android:layout_height="wrap_content"
+
+        android:hint="Car/Bus/Bike"
+        android:gravity="center"
+        android:textSize="30sp"
+
+        android:padding="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="200dp"/>
+
+
+
+    <EditText
+        android:id="@+id/etEnterTime"
+        android:layout_width="302dp"
+        android:layout_height="52dp"
+        android:textSize="30sp"
+
+        app:layout_constraintTop_toBottomOf="@id/etVehicleType"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:gravity="center"
+        android:padding="5dp"
+        android:hint="Maximum Time "
+        android:layout_marginTop="50dp"/>
+
+    <Button
+        android:id="@+id/btnSetTime"
+        android:layout_width="167dp"
+        android:layout_height="50dp"
+        android:text="Set time"
+        android:textSize="20sp"
+
+        app:layout_constraintTop_toBottomOf="@+id/etEnterTime"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="40dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,17 +6,18 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.example.limiter.Vehicle;
 import com.example.limiter.DBServices;
 import com.example.limiter.SharedData;
 import com.example.limiter.Timer;
 import com.example.limiter.databinding.FragmentHomeBinding;
-import com.example.limiter.ui.parking.ParkingFragment;
+import com.example.limiter.ui.parking.*;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -54,7 +55,7 @@ public class HomeFragment extends Fragment {
         btnLeave = binding.btnLeave;
         try {
             ResultSet rs;
-            String query = "select v_id,s_id from limiter.transactions where complete = false and uid = "+uid;
+            String query = "select v_id,s_id from limiter.transactions where complete = 'false' and uid = "+uid;
             Connection conn = DBServices.openDB();
             Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
             rs = stmt.executeQuery(query);
@@ -67,6 +68,7 @@ public class HomeFragment extends Fragment {
                 id=rs.getInt("s_id");
                 carParked=true;
             }
+
             System.out.println(id);
             DBServices.closeDB(conn);
         } catch (Exception e) {
@@ -80,6 +82,7 @@ public class HomeFragment extends Fragment {
                     Intent myIntent = new Intent(getActivity(), Timer.class);
                     myIntent.putExtra("id", id);
                     startActivity(myIntent);
+                    update();
                 }
                 else{
                     Toast.makeText(getActivity(),"Currently your no Car is Parked",Toast.LENGTH_SHORT).show();
@@ -92,6 +95,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 if(carParked) {
                     try {
+                        carParked=false;
                         String upQuery1 = "update limiter.parking_slot set occupied = 'false',start_time=null,tot_time=null where s_id=" + id;
                         String upQuery2 = "update limiter.transactions set complete = 'true' where s_id=" + id;
                         Connection con = DBServices.openDB();
@@ -102,7 +106,7 @@ public class HomeFragment extends Fragment {
                         ParkingFragment.initialise();
                         DBServices.closeDB(con);
                         Toast.makeText(getActivity(),"Car unparked Successfully",Toast.LENGTH_SHORT).show();
-
+                        progressBar.setProgress(0);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -149,7 +153,7 @@ public class HomeFragment extends Fragment {
             }
             //}
         };
-        handler.postDelayed(runnable,6*1000);
+        handler.postDelayed(runnable,60*1000);
     }
 
     private void sendNotification(String email)

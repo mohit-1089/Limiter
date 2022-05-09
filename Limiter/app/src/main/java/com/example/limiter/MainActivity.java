@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.limiter.adminFunction.AdminLoginActivity;
 import com.example.limiter.ui.register.RegisterFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,18 +24,20 @@ public class MainActivity extends AppCompatActivity {
         SharedData.setUser();
         SharedData.setCurrentVehicle();
 
-        Button registerVehicle=findViewById(R.id.adminBtn);
-        registerVehicle.setOnClickListener(new View.OnClickListener() {
+        Button adminBtn=findViewById(R.id.adminBtn);
+        adminBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                Intent intent=new Intent(getApplicationContext(), AdminLoginActivity.class);
+                  startActivity(intent);
 
 //                Fragment fragment=new RegisterFragment();
 //
 //                FragmentTransaction fragmentTransaction= getSupportFragmentManager().beginTransaction();
 //                fragmentTransaction.replace(R.id.container,fragment).commit();
 
-                Vehicle.selectVehicle(MainActivity.this);
+            //    Vehicle.selectVehicle(MainActivity.this,0);
 
             }
         });

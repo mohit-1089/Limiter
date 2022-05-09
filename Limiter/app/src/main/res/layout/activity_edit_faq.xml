@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".adminFunction.EditFAQ">
+
+    <EditText
+        android:id="@+id/etQues"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:maxLines="@integer/material_motion_duration_long_2"
+        android:hint="Question"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="275dp"
+
+
+        />
+
+    <EditText
+        android:id="@+id/etAns"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:maxLines="@integer/material_motion_duration_long_2"
+        android:hint="Answer"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etQues"
+        android:layout_marginTop="70dp"
+        />
+
+    <Button
+        android:id="@+id/btnSubmitFaq"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+
+        android:text="SUBMIT FAQ"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etAns"
+        android:layout_marginTop="50dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
