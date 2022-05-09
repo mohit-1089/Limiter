@@ -20,28 +20,28 @@
     <View
         android:id="@+id/myRectangl"
         android:layout_width="416dp"
-        android:layout_height="452dp"
-        android:layout_marginTop="300dp"
+        android:layout_height="535dp"
+        android:layout_marginTop="48dp"
         android:background="@drawable/rectangle"
         android:foregroundGravity="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/adll" />
 
     <EditText
         android:id="@+id/adminEmail"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="392dp"
+        android:layout_marginTop="88dp"
         android:layout_marginRight="40dp"
         android:backgroundTint="@color/white"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:textColorHint="@color/white"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/myRectangl" />
 
     <EditText
         android:id="@+id/adminPassword"
