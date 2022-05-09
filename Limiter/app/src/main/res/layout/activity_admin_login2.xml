@@ -6,15 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".adminFunction.AdminLoginActivity">
 
+    <ImageView
+        android:id="@+id/adll"
+        android:layout_width="394.94dp"
+        android:layout_height="178.6dp"
+        android:src="@drawable/parking_car"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045" />
+
+    <View
+        android:id="@+id/myRectangl"
+        android:layout_width="416dp"
+        android:layout_height="452dp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/rectangle"
+        android:foregroundGravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/adminEmail"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="392dp"
         android:layout_marginRight="40dp"
+        android:backgroundTint="@color/white"
         android:hint="Email"
         android:inputType="textEmailAddress"
+        android:textColorHint="@color/white"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,8 +50,10 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="100dp"
         android:layout_marginRight="40dp"
+        android:backgroundTint="@color/white"
         android:hint="Password"
         android:inputType="textPassword"
+        android:textColorHint="@color/white"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@id/adminEmail"
@@ -42,10 +68,11 @@
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginTop="90dp"
-        android:backgroundTint="#4861A2"
+        android:backgroundTint="@color/white"
 
         android:text="LOGIN"
         android:textSize="20sp"
+        android:textColor="@color/blue"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/adminPassword"/>
