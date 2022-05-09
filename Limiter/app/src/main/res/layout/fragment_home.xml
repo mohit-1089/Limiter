@@ -18,5 +18,65 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="322dp"
+        android:layout_height="331dp"
+        android:indeterminateOnly="false"
+        android:progressDrawable="@drawable/circle_progress"
+        app:layout_constraintBottom_toTopOf="@+id/btnIncrease"
+        app:layout_constraintEnd_toEndOf="@+id/myRectangleView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/myRectangleView"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/myRectangleView"
+        android:layout_width="335dp"
+        android:layout_height="357dp"
+        android:alpha="0.3"
+        android:background="@drawable/rectangle"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/btnIncrease"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/car"
+        android:layout_width="300.94dp"
+        android:layout_height="178.6dp"
+        android:layout_marginTop="168dp"
+        android:src="@drawable/car"
+        app:layout_constraintHorizontal_bias="0.409"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnIncrease"
+        android:layout_width="186dp"
+        android:layout_height="46dp"
+        android:backgroundTint="@color/blue"
+        android:text="Increase time"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnLeave"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnLeave"
+        app:layout_constraintTop_toBottomOf="@+id/car" />
+
+    <Button
+        android:id="@+id/btnLeave"
+        android:layout_width="186dp"
+        android:layout_height="46dp"
+        android:backgroundTint="@color/blue"
+        android:text="Leave parking"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnIncrease"
+        app:layout_constraintVertical_bias="0.3" />
 </androidx.constraintlayout.widget.ConstraintLayout>
