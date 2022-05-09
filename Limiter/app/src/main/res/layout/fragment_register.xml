@@ -6,19 +6,33 @@
     android:layout_height="match_parent"
     tools:context=".ui.register.RegisterFragment">
 
+    <View
+        android:id="@+id/asr"
+        android:layout_width="337dp"
+        android:layout_height="396dp"
+        android:alpha="0.15"
+        android:background="@drawable/rectangle"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.446" />
+
     <EditText
         android:id="@+id/etVehicleNo"
         android:layout_width="302dp"
         android:layout_height="52dp"
 
-        android:hint="Vehicle Number"
-        android:gravity="center"
+        android:layout_marginTop="208dp"
 
-        app:layout_constraintTop_toTopOf="parent"
+
+        android:hint="Vehicle Number"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="175dp"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
 
@@ -34,7 +48,7 @@
 
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
 
-       >
+        >
         <AutoCompleteTextView
             android:id="@+id/autoCompVehicleNo"
             android:layout_width="match_parent"
@@ -55,21 +69,21 @@
         app:layout_constraintTop_toBottomOf="@+id/etVehicleType"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:gravity="center"
         android:padding="5dp"
         android:hint="Model Name"
         android:layout_marginTop="20dp"/>
 
     <Button
         android:id="@+id/btnRegisVehicle"
-        android:layout_width="167dp"
-        android:layout_height="41dp"
+        android:layout_width="180dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/blue"
         android:text="Save Vehicle"
-
-        app:layout_constraintTop_toBottomOf="@+id/etModelName"
+        android:textSize="18dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="40dp"/>
+        app:layout_constraintTop_toBottomOf="@+id/etModelName" />
 
 
 

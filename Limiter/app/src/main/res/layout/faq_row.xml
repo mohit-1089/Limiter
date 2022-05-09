@@ -12,9 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Question"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:textStyle="bold"
-
+        android:textColor="@color/blue"
         android:padding="5dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -28,7 +28,6 @@
         android:layout_height="wrap_content"
         android:text="Answer"
         android:textSize="20sp"
-        android:textStyle="italic"
 
         android:padding="5dp"
         app:layout_constraintLeft_toLeftOf="parent"

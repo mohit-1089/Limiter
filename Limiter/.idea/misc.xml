@@ -60,6 +60,24 @@
         <entry key="..\:/Users/MOHIT-PC/AndroidStudioProjects/Limiter/app/src/main/res/layout/activity_main.xml" value="0.21944444444444444" />
         <entry key="..\:/Users/jayes/OneDrive/Desktop/yehihailimiter/Limiter/Limiter/app/src/main/res/layout/fragment_parking.xml" value="0.2" />
         <entry key="..\:/Users/jayes/OneDrive/Desktop/yehihailimiter/Limiter/Limiter/app/src/main/res/layout/fragment_register.xml" value="0.1" />
+        <entry key="..\:/limiter-n-n/Limiter/Limiter/app/src/main/res/layout/activity_add_slot.xml" value="0.25" />
+        <entry key="..\:/limiter-n-n/Limiter/Limiter/app/src/main/res/layout/activity_admin_display_parking.xml" value="0.25" />
+        <entry key="..\:/limiter-n-n/Limiter/Limiter/app/src/main/res/layout/activity_admin_function.xml" value="0.25" />
+        <entry key="..\:/limiter-n-n/Limiter/Limiter/app/src/main/res/layout/activity_admin_login2.xml" value="0.25" />
+        <entry key="..\:/limiter-n-n/Limiter/Limiter/app/src/main/res/layout/activity_change_password.xml" value="0.25" />
+        <entry key="..\:/limiter-n-n/Limiter/Limiter/app/src/main/res/layout/activity_edit_faq.xml" value="0.25" />
+        <entry key="..\:/limiter-n-n/Limiter/Limiter/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/limiter-n-n/Limiter/Limiter/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/limiter-n-n/Limiter/Limiter/app/src/main/res/layout/activity_otp.xml" value="0.25" />
+        <entry key="..\:/limiter-n-n/Limiter/Limiter/app/src/main/res/layout/activity_set_max_time.xml" value="0.25" />
+        <entry key="..\:/limiter-n-n/Limiter/Limiter/app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
+        <entry key="..\:/limiter-n-n/Limiter/Limiter/app/src/main/res/layout/app_bar_sidebar.xml" value="0.25" />
+        <entry key="..\:/limiter-n-n/Limiter/Limiter/app/src/main/res/layout/faq_row.xml" value="0.25" />
+        <entry key="..\:/limiter-n-n/Limiter/Limiter/app/src/main/res/layout/fragment_parking.xml" value="0.25" />
+        <entry key="..\:/limiter-n-n/Limiter/Limiter/app/src/main/res/layout/fragment_register.xml" value="0.25" />
+        <entry key="..\:/limiter-n-n/Limiter/Limiter/app/src/main/res/layout/select_and_register.xml" value="0.25" />
+        <entry key="..\:/limiter-n-n/Limiter/Limiter/app/src/main/res/layout/vehicle_row.xml" value="0.25" />
+        <entry key="..\:/limiter-n-n/Limiter/Limiter/app/src/main/res/layout/vehicle_timer.xml" value="0.25" />
       </map>
     </option>
   </component>

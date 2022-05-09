@@ -32,7 +32,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
 
-         />
+        />
     <Button
         android:id="@+id/btnRegisVehicle"
         android:layout_width="wrap_content"
@@ -40,6 +40,7 @@
 
         android:text="Register Vehicle"
         android:layout_marginTop="10dp"
+        android:backgroundTint="@color/blue"
         app:layout_constraintTop_toBottomOf="@+id/rvSelectVehicle"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

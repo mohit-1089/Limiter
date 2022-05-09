@@ -6,48 +6,63 @@
     android:layout_height="match_parent"
     tools:context=".adminFunction.SetMaxTime">
 
-    <EditText
-        android:id="@+id/etVehicleType"
-        android:layout_width="302dp"
-        android:layout_height="wrap_content"
-
-        android:hint="Car/Bus/Bike"
-        android:gravity="center"
-        android:textSize="30sp"
-
-        android:padding="5dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+    <View
+        android:id="@+id/asr"
+        android:layout_width="338dp"
+        android:layout_height="335dp"
+        android:alpha="0.15"
+        android:background="@drawable/rectangle"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="200dp"/>
-
-
-
-    <EditText
-        android:id="@+id/etEnterTime"
-        android:layout_width="302dp"
-        android:layout_height="52dp"
-        android:textSize="30sp"
-
-        app:layout_constraintTop_toBottomOf="@id/etVehicleType"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:gravity="center"
-        android:padding="5dp"
-        android:hint="Maximum Time "
-        android:layout_marginTop="50dp"/>
+        app:layout_constraintVertical_bias="0.446" />
 
     <Button
         android:id="@+id/btnSetTime"
         android:layout_width="167dp"
         android:layout_height="50dp"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="@color/blue"
         android:text="Set time"
         android:textSize="20sp"
-
-        app:layout_constraintTop_toBottomOf="@+id/etEnterTime"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="40dp"/>
+        app:layout_constraintTop_toBottomOf="@+id/etEnterTime" />
+
+    <EditText
+        android:id="@+id/etEnterTime"
+        android:layout_width="231dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="32dp"
+
+        android:gravity="center"
+        android:hint="Maximum Time "
+        android:padding="5dp"
+        android:textSize="20sp"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etVehicleType" />
+
+    <EditText
+        android:id="@+id/etVehicleType"
+        android:layout_width="231dp"
+        android:layout_height="47dp"
+
+        android:layout_marginTop="208dp"
+        android:gravity="center"
+        android:hint="Car/Bus/Bike"
+
+        android:padding="5dp"
+        android:textSize="20sp"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
