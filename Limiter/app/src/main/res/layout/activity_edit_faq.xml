@@ -23,7 +23,7 @@
         android:id="@+id/etAns"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:backgroundTint="@color/blue"
         android:hint="Answer"
         android:maxLines="@integer/material_motion_duration_long_2"
@@ -31,7 +31,7 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etQues" />
+        app:layout_constraintTop_toBottomOf="@+id/etQues" />
 
     <Button
         android:id="@+id/btnSubmitFaq"
@@ -51,17 +51,17 @@
         android:id="@+id/etQues"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="60dp"
         android:backgroundTint="@color/blue"
         android:hint="Question"
         android:maxLines="@integer/material_motion_duration_long_2"
         android:textColorHint="@color/blue"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintLeft_toLeftOf="parent"
+
+
         app:layout_constraintRight_toRightOf="parent"
-
-
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/efr" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

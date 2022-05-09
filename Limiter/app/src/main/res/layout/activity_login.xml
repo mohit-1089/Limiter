@@ -20,19 +20,19 @@
     <View
         android:id="@+id/myRectangleView"
         android:layout_width="414dp"
-        android:layout_height="499dp"
-        android:layout_marginTop="284dp"
+        android:layout_height="538dp"
+        android:layout_marginTop="76dp"
         android:background="@drawable/rectangle"
         android:foregroundGravity="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/nl" />
 
     <EditText
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="380dp"
+        android:layout_marginTop="68dp"
         android:layout_marginRight="40dp"
         android:backgroundTint="@color/white"
         android:hint="Email"
@@ -41,7 +41,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/myRectangleView" />
 
     <EditText
         android:id="@+id/password"

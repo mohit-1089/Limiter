@@ -20,7 +20,7 @@
         android:id="@+id/btnAdminDisplay"
         android:layout_width="221dp"
         android:layout_height="48dp"
-        android:layout_margin="190dp"
+
         android:backgroundTint="@color/blue"
         android:padding="3dp"
         android:text="Display Parking"
@@ -28,8 +28,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.591" />
+        app:layout_constraintTop_toBottomOf="@+id/adl"
+        app:layout_constraintVertical_bias="0.247" />
 
     <Button
         android:id="@+id/btnAddSlot"
