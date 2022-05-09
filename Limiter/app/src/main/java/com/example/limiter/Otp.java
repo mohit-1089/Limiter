@@ -60,9 +60,9 @@ public class Otp extends AppCompatActivity {
 
             message.setText(""+otpVal);
 
-           // Transport.send(message);
+            Transport.send(message);
 
-            Toast.makeText(getApplicationContext(),""+otpVal,Toast.LENGTH_LONG).show();
+            //Toast.makeText(getApplicationContext(),""+otpVal,Toast.LENGTH_LONG).show();
 
         }
        catch (AddressException e) {
