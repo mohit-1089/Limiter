@@ -74,20 +74,23 @@ public class SignUp extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Password is Weak",Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    try {
-                        User u= new User(-1,first_name,last_name,email,mobileNo,password);
-                        int res =DBServices.addUser(u);
-                        if(res>0)
-                        {
-                            Toast.makeText(getApplicationContext(),"Registration Successful",Toast.LENGTH_SHORT).show();
+                    if(!DBServices.checkEmail(email)) {
+                        try {
+                            User u = new User(-1, first_name, last_name, email, mobileNo, password);
+                            int res = DBServices.addUser(u);
+                            if (res > 0) {
+                                Toast.makeText(getApplicationContext(), "Registration Successful", Toast.LENGTH_SHORT).show();
 
+                            }
+
+                        } catch (Exception e) {
+                            Toast.makeText(getApplicationContext(), "Registration Unsuccessful", Toast.LENGTH_SHORT).show();
+                            e.printStackTrace();
                         }
-
                     }
-                    catch(Exception e)
+                    else
                     {
-                        Toast.makeText(getApplicationContext(),"Registration Unsuccessful",Toast.LENGTH_SHORT).show();
-                        e.printStackTrace();
+                        Toast.makeText(getApplicationContext(),"Email Already exists !",Toast.LENGTH_SHORT).show();
                     }
                 }
 

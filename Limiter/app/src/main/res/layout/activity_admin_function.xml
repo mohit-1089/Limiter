@@ -64,7 +64,7 @@
         android:id="@+id/btnEditFaq"
         android:layout_width="221dp"
         android:layout_height="48dp"
-        android:layout_margin="15dp"
+        android:layout_margin="15px"
         android:backgroundTint="@color/blue"
         android:padding="3dp"
         android:text="EDIT FAQ"
