@@ -115,13 +115,15 @@ public class Otp extends AppCompatActivity {
         btnResend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-               sOtp=sendOtp(SharedData.globalUser.email);
+                System.out.println("");
+                sOtp = sendOtp(SharedData.globalUser.email);
 
             }
         });
 
     }
+
+
 
 
 }
