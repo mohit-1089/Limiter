@@ -18,10 +18,10 @@ public class DBServices {
     public static Connection openDB() throws SQLException
     {
         Connection con=null;
-        String url = "jdbc:mysql://limiter-server.mysql.database.azure.com:3306/";
-        String database = "Limiter";
-        String user = "Master@limiter-server";
-        String password = "Monkey@123";
+        String url = "SQL_URL";
+        String database = "DATA_BASE";
+        String user = "USER_NAME";
+        String password = "PASSWORD";
         String driver = "com.mysql.jdbc.Driver";
         try {
             StrictMode.ThreadPolicy thr = new StrictMode.ThreadPolicy.Builder().permitAll().build();
