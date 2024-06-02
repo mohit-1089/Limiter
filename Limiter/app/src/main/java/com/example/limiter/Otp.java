@@ -29,8 +29,9 @@ public class Otp extends AppCompatActivity {
     Button btnSubmit,btnResend;
     TextView tvEmail;
     int sOtp;
-
-    String sEmail="projectlimiter@gmail.com",sPassword="limiter@123";
+    
+    // email from which otp to be send to the user
+    String sEmail="EMAIL",sPassword="PASSWORD";
 
     private int sendOtp(String email)
     {
